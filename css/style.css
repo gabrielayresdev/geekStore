@@ -1,0 +1,143 @@
+:root {
+    --azul: #2A7AE4;
+    --preto: #464646;
+    --branco: #FFFFFF;
+    --cinza: #F5F5F5;
+
+    --fontSize-grande: 1.8em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--preto);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container {
+    width: 78%;
+    margin: 0 auto;
+}
+
+/* =============== HEADER =============== */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--fontSize-grande);
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--azul);
+}
+
+/* Busca */
+.search {
+    background: var(--cinza);
+    border-radius: 40px;
+    width: 27vw;
+
+    position: relative;
+}
+
+.search input {
+    background: transparent;
+    border: 0;
+    font-size: 16px;
+    width: 95%;
+
+    padding: 12px 30px 12px 16px;
+}
+
+.search i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Botões */
+.btn {
+    color: var(--branco);
+    background: var(--azul);
+    padding: 16px;
+    border: 1px solid var(--azul);
+    cursor: pointer;
+}
+
+.header__right .btn {
+    color: var(--azul);
+    background: var(--branco);
+    padding: 16px 70px;
+}
+
+.header__right .btn:active {
+    color: var(--branco);
+    background: var(--azul);
+}
+
+/* =============== MAIN =============== */
+
+/* Banner */
+
+.banner {
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px 0;
+
+    width: 100%;
+    height: 50vh;
+    max-height: 22rem;
+
+    color: var(--branco);
+    display: flex;
+}
+
+.banner .container {
+    align-self: end;
+}
+
+.banner__texto {
+    font-weight: 700;
+}
+
+.banner__texto h2 {
+    font-size: 52px;
+    margin-bottom: 16px;
+}
+
+.banner__texto h3 {
+    font-size: 22px;
+}
+
+.banner .btn {
+    margin-top: 16px;
+}
