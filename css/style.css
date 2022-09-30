@@ -25,6 +25,11 @@ body {
     font-size: 16px;
 }
 
+/* .wrapper {
+    width: 100vw;
+    overflow-x: hidden;
+} */
+
 .container {
     width: 78%;
     margin: 0 auto;
@@ -32,17 +37,18 @@ body {
 
 /* =============== HEADER =============== */
 
+
 .cabecalho {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     justify-content: space-between;
     padding: 1em 0;
+    gap: 32px;
 }
 
 .header__left {
     display: flex;
     align-items: center;
-    gap: 32px;
 }
 
 /* Logo */
@@ -52,6 +58,7 @@ body {
     align-items: center;
     font-size: var(--fontSize-grande);
     font-weight: 700;
+    gap: 0;
 }
 
 .logo span {
@@ -65,6 +72,8 @@ body {
     width: 27vw;
 
     position: relative;
+
+    justify-self: flex-start;
 }
 
 .search input {
@@ -97,17 +106,17 @@ body {
     opacity: .95;
 }
 
-.header__right .btn {
+.cabecalho .btn {
     color: var(--azul);
     background: var(--branco);
     padding: 16px 70px;
 }
 
-.header__right .btn:hover {
+.cabecalho .btn:hover {
     background: var(--azul-claro);
 }
 
-.header__right .btn:active {
+.cabecalho .btn:active {
     color: var(--branco);
     background: var(--azul);
 }
@@ -183,7 +192,7 @@ body {
 .produtos {
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 16px;
 }
 
 .produtos li {
@@ -316,4 +325,95 @@ footer {
 
 footer a {
     color: var(--azul);
+}
+
+@media screen and (max-width: 540px) {
+
+    .container {
+        width: calc(100vw - 32px);
+        margin: 0 auto;
+    }
+
+    /* Header */
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    .cabecalho {
+        gap: 32px;
+    }
+
+    .cabecalho .btn {
+        padding: 12px 47px;
+        flex-grow: 1;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .search {
+        background: transparent;
+        width: auto;
+        grid-column: 3;
+    }
+
+    .search i {
+        right: 0;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    /* Banner */
+    .banner {
+        max-height: 18rem;
+    }
+
+    .banner h2 {
+        font-size: 22px;
+    }
+
+    .banner h3 {
+        font-size: 14px;
+    }
+
+    /* Catalogo */
+    .catalogo {
+        margin-top: 16px;
+    }
+
+    .produtos {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .produtos li:nth-of-type(n + 5) {
+        display: none;
+    }
+
+    .produtos li {
+        min-width: 40%;
+        flex-grow: 1;
+    }
+
+    /* Contato */
+
+    .contato .container {
+        grid-template-columns: 100%;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .contato .logo {
+        justify-self: center;
+    }
+
+    .contato__links {
+        text-align: center;
+        margin-bottom: 16px;
+        gap: 16px;
+    }
+
+
 }
