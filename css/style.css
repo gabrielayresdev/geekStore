@@ -179,7 +179,7 @@ main {
     margin-top: 64px;
 }
 
-.catalogo:last-of-type {
+.catalogo:nth-last-of-type(2) {
     margin-bottom: 64px;
 }
 
@@ -473,6 +473,13 @@ footer a {
         text-align: center;
         margin-bottom: 16px;
         gap: 16px;
+    }
+
+    /* Login */
+
+    .login form {
+        width: 100%;
+        padding: 50px 0;
     }
 
 }
